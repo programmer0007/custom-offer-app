@@ -1,0 +1,59 @@
+<!-- <div class="header-tab">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav2">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div> -->
+
+
+
+<header class="header-main-sec">
+  <div class="header-logo">
+    {{-- <a href="#"><img src="../../../public/admin_/custom/images/dynamiclogo.png" class="img-fluid dynamiclogo-img">Dynamic Dreamz</a> --}}
+    <a href="{{ route('dashboard') }}"><img src="{{ asset('admin_/custom/images/dynamiclogo.png') }}" class="img-fluid dynamiclogo-img">Dynamic Dreamz</a>
+  </div>
+  <div class="header-menu">
+  <ul>
+    <li>
+      @php
+        $query_p =http_build_query(request()->all()) ;
+      @endphp
+      <!-- <a href="{{ route('dashboard') }}">DashBoard</a> -->
+      <a href="{{route('dashboard')}}?{{$query_p}}&embedded=1">DashBoard</a>
+    </li>
+        <li>
+      <a href="{{route('setting')}}?{{$query_p}}&embedded=1">Setting</a>
+    </li>
+        <li>
+      <a href="#">Help</a>
+    </li>
+  </ul>
+  </div>
+
+  <div class="toggler-icon">
+    <a href="#">
+        <img src="{{ asset('admin_/custom/images/toggler-icon.png') }}" class="img-fluid toggler-img">
+        {{-- <img src="../../../public/admin_/custom/images/toggler-icon.png" class="img-fluid toggler-img"> --}}
+      </a>
+  </div>
+</header>
+
+

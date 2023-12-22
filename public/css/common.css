@@ -1,0 +1,22 @@
+.top_menubar ul li {
+    list-style-type: none;
+}
+
+.top_menubar ul li a.nav-link {
+    padding: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.top_menubar ul {
+    margin: 0;
+}
+
+.top_menubar ul li a.nav-link .sb-nav-link-icon {
+    padding-right: 5px;
+}
+
+.btn-primary.Edit {
+    margin-right: 10px;
+}
